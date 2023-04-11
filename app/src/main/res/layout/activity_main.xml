@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:scrollbarStyle="outsideInset"
+    android:scrollbars="vertical"
+    android:verticalScrollbarPosition="right">
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/appleImage"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        app:srcCompat="@drawable/nutricao" />
+
+    <TextView
+        android:id="@+id/titleNutriLife"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_marginTop="30dp"
+        android:background="#00B60000"
+        android:backgroundTint="#00C31919"
+        android:foregroundTint="#00C10000"
+        android:text="NutriLife"
+        android:textColor="#FD636E"
+        android:textColorHighlight="#00DC0A0A"
+        android:textColorHint="#00DD0D0D"
+        android:textColorLink="#00B50505"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.572"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="50dp"
+        android:text="Calculadora IMC"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleNutriLife" />
+
+    <TextView
+        android:id="@+id/nomeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:text="Nome: "
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitulo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/my_input_text"
+        android:orientation="vertical"
+        android:outlineProvider="background"
+        app:boxBackgroundColor="#EFEFEF"
+        app:boxBackgroundMode="outline"
+        app:boxCollapsedPaddingTop="10dp"
+        app:boxStrokeColor="#910505"
+        app:boxStrokeErrorColor="#A10000"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomeText"
+        app:startIconScaleType="centerInside">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nomeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:hapticFeedbackEnabled="false"
+            android:inputType="textPersonName"
+            android:outlineProvider="paddedBounds"
+            android:textColor="#000000"
+            tools:layout_conversion_absoluteHeight="56dp"
+            tools:layout_conversion_absoluteWidth="409dp"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="371dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/pesoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:text="Peso:"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputName" />
+
+    <TextView
+        android:id="@+id/alturaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Altura: "
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pesoText"
+        app:layout_constraintTop_toBottomOf="@+id/inputName" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="195dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        app:boxBackgroundColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pesoText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pesoEditText"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="#000000" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        app:boxBackgroundColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/alturaText"
+        app:layout_constraintTop_toBottomOf="@+id/alturaText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/alturaEditText"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/generoTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:text="Sexo:"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+    <RadioGroup
+        android:id="@+id/RadioGroupGenero"
+        android:layout_width="408dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="10dp"
+        android:checkedButton="@id/radioButtonMasculino"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/generoTxt">
+
+        <RadioButton
+            android:id="@+id/radioButtonMasculino"
+            android:layout_width="195dp"
+            android:layout_height="match_parent"
+            android:text="Masculino"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFeminino"
+            android:layout_width="164dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Feminino"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/my_button"
+        android:shadowColor="#FFFFFF"
+        android:text="CALCULAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RadioGroupGenero" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
